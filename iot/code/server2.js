@@ -19,8 +19,6 @@ wss.on('connection', (ws) => {
     if (topic === mqttTopic) {
       const data = message.toString();
       console.log(`MQTT sub: ${data}`);
-
-      // Gửi dữ liệu lên WebSocket khi có dữ liệu từ MQTT
       ws.send(data);
     }
   });
