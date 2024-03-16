@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./highchart_lib.js"></script>
+    <script src="./main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>test</title>
+</head>
+
+<body>
+    <div class="bg-image" style="background-image: url('bando.png'); height: 100vh">
+        <h1 class="text-white bg-primary text-center"> VŨ QUANG TRƯỜNG-B19DCDT250</h1>
+        <div class="row " style="line-height: 40px">
+            <span class="align-text-top  ">.</span>
+
+            <div class="col p-3 op-1 rounded-pill text-black" id="ND">
+                <h2 class="text-while">Nhiệt độ</h2>
+                <p><h1 id=ND2></h1></p>
+            </div>
+
+            <div class="col p-3 op-2 rounded-pill text-black" id="DA">
+                <h1>Độ ẩm</h1>
+                <p><h1 id="DA2"></h1></p>
+            </div>
+
+            <div class="col p-3 op-3 rounded-pill text-black" id="AS">
+                <h1>Ánh sáng</h1>
+                <p><h1 id="AS2"></h1></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <!-- Cột bên phải -->
+                <div class="col-md-6 p-0 pr-md-3 pt-md-5 pb-md-6 bg-image" style="height:200px">
+                    <figure class="highcharts-figure">
+                        <div id="container"></div>
+                        <p class="highcharts-description"></p>
+                    </figure>
+                </div>
+        
+                <!-- Cột bên trái -->
+                <div class="col-md-6 p-3">
+                    <div class="row">
+                        <div class="col-6 p-3 text-white text-center">
+                            <h2><span class="badge rounded-pill bg-primary" id="nutnhan">
+                                BUTTON 1
+                                <button type="button" class="btn btn-success" onclick="aon()">ON</button>
+                                <button type="button" class="btn btn-danger" onclick="aof()">OFF</button>
+                            </span></h2>
+                            <img id="myImage" src="bongden1.gif" style="width:150px; height:250px">
+                        </div>
+        
+                        <div class="col-6 p-3 text-white text-center">
+                            <h2><span class="badge rounded-pill bg-primary" id="nutnhan2">
+                                BUTTON 2
+                                <button type="button" class="btn btn-success" onclick="bon()">ON</button>
+                                <button type="button" class="btn btn-danger" onclick="bof()">OFF</button>
+                            </span></h2>
+                            <img id="myImage1" src="bongden1.gif" style="width:150px; height:250px">
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-6 p-3 text-white text-center">
+                            <h2><span class="badge rounded-pill bg-primary" id="cua1">
+                                DOOR 
+                                <button type="button" class="btn btn-success" onclick="con()">ON</button>
+                                <button type="button" class="btn btn-danger" onclick="cof()">OFF</button>
+                            </span></h2>
+                            <img id="myImage2" src="closedoor.png" style="width:300px; height:250px">
+                        </div>
+        
+                        <div class="col-6 p-3 text-white text-center">
+                            <h2><span class="badge rounded-pill bg-primary" id="bd1">
+                                Báo Động
+                                <button type="button" class="btn btn-success" onclick="don()">ON</button>
+                                <button type="button" class="btn btn-danger" onclick="dof()">OFF</button>
+                            </span></h2>
+                            <img id="myImage3" src="coi2.png" style="width:300px; height:250px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+</body>
+
+</html>
