@@ -7,7 +7,7 @@ const dataND=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 const dataDA=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 const dataAS=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
-// Kết nối đến máy chủ WebSocket
+
 const socket = new WebSocket('ws://localhost:3000');
 
 socket.addEventListener('open', () => {
@@ -23,7 +23,7 @@ socket.addEventListener('message', (event) => {
         const data = JSON.parse(event.data);
 
         if (data && data.temperature_C !== undefined && data.humidity_percent !== undefined && data.light_lux !== undefined && data.gas_value !== undefined) {
-            // Xử lý dữ liệu nhận được từ serverdata.gas_value
+           
             let nhietDo = data.temperature_C.toFixed(2);
             let doAm = data.humidity_percent;
             let anhSang = data.light_lux;
@@ -89,7 +89,7 @@ socket.addEventListener('message', (event) => {
             KTanhsang(anhSang);
             KTkhigas(gas);
 
-            // Hiển thị biểu đồ
+            
             Highcharts.chart('container', {
                 title: {
                     text: 'Biểu đồ nhiệt độ - độ ẩm - ánh sáng'
